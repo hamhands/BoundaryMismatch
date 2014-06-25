@@ -1,5 +1,5 @@
 ##The Problem of Boundary Mismatch
----
+
 *The tutorial that follows is written for users of ESRI products, but may be adapted in the future to reference QGIS*
 ###Why Boundaries Matter
 One of the biggest issues when it comes to mapping out data is how we define boundaries. [Geographers are always talking about this,](http://en.wikipedia.org/wiki/Modifiable_areal_unit_problem) but it's more than just a theoretical conundrum -- it's [an everyday GIS question ](http://giscollective.org/geographic-data-assumptions-maup-and-ecological-fallacies/)we have to grapple with
@@ -22,7 +22,7 @@ In my example I want to take data that exists in one dataset and put it in anoth
 
 That last parameter is very important and will take the most thought/time, depending on how many fields you want to aggregate.
 
-![](mergeRule.jpg)
+![](mergeRule.JPG)
 
 _So many choices..._
 

@@ -41,6 +41,8 @@ _Boundary mismatch in action._
 
 Your new feature class, should be populated with data from the join features according to the merge rule you selected. The example above was performed based on centroid, but you can choose other types of spatial relationships using the _Match Rule_ parameter. To minimize boundary mismatch or overhang, use the smallest (i.e. finest grain) join feature available. If you need your data to exactly match the larger polygons for symbolization purposes, you can join your new aggregate feature class to your target feature class, but this is entirely up to you. Otherwise, record some metadata and be on your merry aggregating way!
 
-Hope that helps.
+###Final Considerations
+
+One take away from the image above is that it is very difficult to remove overlap entirely. There are other ways to estimate values to more neatly fit into a polygon (e.g. convert to a raster and use a polygon to essentially take an average of the original values), but these methods are still not completely precise. That said, it is possible to make reasonably good estimations following processes like the one here.
 
 **Questions? Comments? Empty threats? Feel free to forward all to [Patrick.](mailto:patrick.t.hammons@gmail.com)**

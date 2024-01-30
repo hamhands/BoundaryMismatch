@@ -9,7 +9,7 @@ We can _lie_ about our data by drawing our boundaries in deceptive ways, spatial
 ### An Everyday Scenario
 Let's say I work for a state representative who wants a more complete picture of her consituency. I took a couple of sociology classes in college, so I know that the main source for demographic data comes from the U.S. Census Bureau. After a little digging, I learn that the Census uses [certain boundaries](http://www.census.gov/geo/maps-data/data/tiger-cart-boundary.html) in carrying out their work. Unfortunately, none of these line up perfectly with the district we serve, so I have to figure out some way to merge the Census boundaries with state house districts. That's where the trusty spatial join comes in.
 
-###Y our Friend The Join
+### Y our Friend The Join
 Joining data is your bread and butter when doing stuff in a GIS. Typically, there are two types of joins:
 - **Tabular Join**: based on a shared field between two tables
 - **Spatial Join**: based on some kind of spatial relatonship
@@ -28,7 +28,7 @@ _So many choices..._
 
 **NOTE:** the default merge rule setting is _First_, which just takes the value of the first record in the join feature class. For quantitative data, there is little reason to choose this rule, so be careful.
 
-###Setting Up The Join
+### Setting Up The Join
 This is where you need to determine what you're trying to get at with your data. Are you looking for raw counts? Then _Sum_ is for you. Averages between your records? Then you should aggregate by _Mean_. It's really easy to screw up if you don't know your data very well (e.g. adding up average ages won't tell you anything), so pore over your metadata if you need to.
 
 Once you figure out what to do with your data, now you can go crazy with your merge rules. If you're working with census data, you might have a ridiculous amount of fields. Unfortunately there's not a way to select one rule for a lot of fields at once, so you may have to spend a bit of time monotonously right-clicking fields, but hey, you can always listen to an [interesting podcast](http://www.thisamericanlife.org/podcast) while you're at it, right?

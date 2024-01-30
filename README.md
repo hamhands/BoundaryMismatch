@@ -9,7 +9,7 @@ We can _lie_ about our data by drawing our boundaries in deceptive ways, spatial
 ### An Everyday Scenario
 Let's say I work for a state representative who wants a more complete picture of her consituency. I took a couple of sociology classes in college, so I know that the main source for demographic data comes from the U.S. Census Bureau. After a little digging, I learn that the Census uses [certain boundaries](http://www.census.gov/geo/maps-data/data/tiger-cart-boundary.html) in carrying out their work. Unfortunately, none of these line up perfectly with the district we serve, so I have to figure out some way to merge the Census boundaries with state house districts. That's where the trusty spatial join comes in.
 
-### Y our Friend The Join
+### Meet our Friend The Join
 Joining data is your bread and butter when doing stuff in a GIS. Typically, there are two types of joins:
 - **Tabular Join**: based on a shared field between two tables
 - **Spatial Join**: based on some kind of spatial relatonship

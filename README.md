@@ -1,15 +1,15 @@
-##The Problem of Boundary Mismatch
+## The Problem of Boundary Mismatch
 
 *The tutorial that follows is written for users of ESRI products, but may be adapted in the future to reference QGIS*
-###Why Boundaries Matter
+### Why Boundaries Matter
 One of the biggest issues when it comes to mapping out data is how we define boundaries. [Geographers are always talking about this,](http://en.wikipedia.org/wiki/Modifiable_areal_unit_problem) but it's more than just a theoretical conundrum -- it's [an everyday GIS question ](http://giscollective.org/geographic-data-assumptions-maup-and-ecological-fallacies/)we have to grapple with
 
 We can _lie_ about our data by drawing our boundaries in deceptive ways, spatially cherrypicking patterns to fit an argument we are trying to convey. Then all we have to do is plot it on a map and **VOILA** we can prove whatever we want! Obviously, this is a big problem -- particularly as most casual map readers see maps as objective representations of the real world -- but that doesn't mean that boundaries are entirely subjective. From an administrative standpoint, **boundaries have clear significance that can be felt**. From collecting taxes, to assigning policing responsibilities, to funding schools, boundaries DO matter because we as a society organize space accordingly.
 
-###An Everyday Scenario
+### An Everyday Scenario
 Let's say I work for a state representative who wants a more complete picture of her consituency. I took a couple of sociology classes in college, so I know that the main source for demographic data comes from the U.S. Census Bureau. After a little digging, I learn that the Census uses [certain boundaries](http://www.census.gov/geo/maps-data/data/tiger-cart-boundary.html) in carrying out their work. Unfortunately, none of these line up perfectly with the district we serve, so I have to figure out some way to merge the Census boundaries with state house districts. That's where the trusty spatial join comes in.
 
-###Your Friend The Join
+###Y our Friend The Join
 Joining data is your bread and butter when doing stuff in a GIS. Typically, there are two types of joins:
 - **Tabular Join**: based on a shared field between two tables
 - **Spatial Join**: based on some kind of spatial relatonship
@@ -41,7 +41,7 @@ _Boundary mismatch in action._
 
 Your new feature class, should be populated with data from the join features according to the merge rule you selected. The example above was performed based on centroid, but you can choose other types of spatial relationships using the _Match Rule_ parameter. To minimize boundary mismatch or overhang, use the smallest (i.e. finest grain) join feature available. If you need your data to exactly match the larger polygons for symbolization purposes, you can join your new aggregate feature class to your target feature class, but this is entirely up to you. Otherwise, record some metadata and be on your merry aggregating way!
 
-###Final Considerations
+### Final Considerations
 
 One take away from the image above is that it is very difficult to remove overlap entirely. There are other ways to estimate values to more neatly fit into a polygon (e.g. convert to a raster and use a polygon to essentially take an average of the original values), but these methods are still not completely precise. That said, it is possible to make reasonably good estimations following processes like the one here.
 
